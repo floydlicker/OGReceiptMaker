@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .content {
+            display: none;
+            text-align: center;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .password-section {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="password-section">
+        <h2>Enter Password</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-message" style="color: red; display: none;">Incorrect password, please try again.</p>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to the Fortnite Site</h2>
+        <div class="buttons">
+            <!-- Button links updated to match the file names you provided -->
+            <button onclick="window.location.href='ps4receiptfreefortnite.html'">Fortnite PS4 Receipt</button>
+            <button onclick="window.location.href='ps4receiptfoundersdeluxe.html'">Fortnite Founders Deluxe PS4 Receipt</button>
+            <button onclick="window.location.href='ps4standardfounderspackstw.html'">Fortnite Founders Pack PS4 Standard</button>
+            <button onclick="window.location.href='savetheworldreceip.html'">Save the World Receipt</button>
+            <button onclick="window.location.href='xboxstwreceiptprenuim.html'">Save the World Xbox Premium Receipt</button>
+            <button onclick="window.location.href='xboxvbucksreceipt.html'">Xbox V-Bucks Receipt</button>
+        </div>
+    </div>
+
+    <script>
+        const correctPassword = 'fl9oydlickinggod8422';
+
+        function checkPassword() {
+            const enteredPassword = document.getElementById('password').value;
+            if (enteredPassword === correctPassword) {
+                document.querySelector('.password-section').style.display = 'none';
+                document.querySelector('.content').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
